@@ -61,8 +61,10 @@ ToDos:
 
 Install:
 --------
-1. Download PicResorter.jar [github](https://github.com/andreaskielkopf/PicResorter) and save it where you want `wget https://github.com/andreaskielkopf/PicResorter/Picresorter.jar/raw/master/Picresorter.jar`
+1. Download [PicResorter.jar](https://github.com/andreaskielkopf/PicResorter/raw/master/PicResorter.jar) from [github](https://github.com/andreaskielkopf/PicResorter) and save it where you want 
+`https://github.com/andreaskielkopf/PicResorter/raw/master/Picresorter.jar`
 2. Check the sha256sum `sha256sum PicResorter.jar`
+3. start with `java -jar ./PicResorter.jar`
  
 #### sha256sum of v1.0
 c034352a3a71e3688c0d452fec4ed4fedace90efd89b303752c42c0ce17fbabd  PicResorter.jar
