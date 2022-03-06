@@ -46,7 +46,7 @@ Project Members
 
 
 Depends on
-----------
+---------- 
 
 - `java` (1.8 or any newer version should work)
 
@@ -70,3 +70,4 @@ c034352a3a71e3688c0d452fec4ed4fedace90efd89b303752c42c0ce17fbabd  PicResorter.ja
 ----
 P.S. If current developments trouble you, you can [find peace](https://www.jw.org/en/library/series/more-topics/russia-invades-ukraine-bible-meaning-hope/)
 P.S. Wenn dich die aktuellen Entwicklungen beunruhigen kannst du [Frieden finden](https://www.jw.org/de/bibliothek/artikelserien/weitere-themen/russland-marschiert-in-ukraine-ein-biblische-bedeutung-hoffnung/)
+ 
