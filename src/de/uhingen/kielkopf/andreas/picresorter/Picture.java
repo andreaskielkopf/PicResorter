@@ -171,4 +171,7 @@ public class Picture extends JPanel {
       this.repaint();
       this.getParent().repaint();
    }
+   public String getFilename() {
+      return file.getName();// +":"+file.getPath();
+   }
 }

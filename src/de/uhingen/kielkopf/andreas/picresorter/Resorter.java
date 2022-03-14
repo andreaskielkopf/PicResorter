@@ -17,7 +17,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.NoSuchFileException;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
@@ -62,15 +61,29 @@ public class Resorter extends JPanel
    }
    public void addPicture(File pictureFile) throws Exception {
       Picture picture=new Picture(pictureFile);
-      picturelist.add(picture);
+      // suche die Stelle wo eingefügt werden soll
+      synchronized (picturelist) {
+         picturelist.add(getInsertPos(picture), picture);
+      }
       picture.updateName();
       SwingUtilities.invokeLater(new Runnable() {
          @Override
          public void run() {
-            me.add(picture);
+            // me.add(picture);
+            me.updatePictures();
             me.revalidate();
          }
       });
+   }
+   private int getInsertPos(Picture picture) {
+      int    i=0;
+      String n=picture.getFilename();
+      for (Picture picture2:picturelist) {
+         if (n.compareTo(picture2.getFilename()) <= 0)
+            break;
+         i++;
+      }
+      return i;
    }
    /**
     * Transferhandler um Dateinamen von Bilern zu bekommen
@@ -120,7 +133,6 @@ public class Resorter extends JPanel
                try {
                   List<File> filelist=(java.util.List<File>) info.getTransferable()
                            .getTransferData(DataFlavor.javaFileListFlavor);
-                  Collections.sort(filelist);
                   for (File file:filelist) {
                      pool.execute(new Runnable() {
                         @Override
@@ -230,7 +242,7 @@ public class Resorter extends JPanel
          updatePictures();
       }
    }
-   private void updatePictures() {
+   void updatePictures() {
       this.removeAll();
       this.add(dropLabel);
       for (Picture picture1:picturelist)
