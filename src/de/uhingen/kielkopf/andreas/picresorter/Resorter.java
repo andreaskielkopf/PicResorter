@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.NoSuchFileException;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
@@ -119,6 +120,7 @@ public class Resorter extends JPanel
                try {
                   List<File> filelist=(java.util.List<File>) info.getTransferable()
                            .getTransferData(DataFlavor.javaFileListFlavor);
+                  Collections.sort(filelist);
                   for (File file:filelist) {
                      pool.execute(new Runnable() {
                         @Override
