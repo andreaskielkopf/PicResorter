@@ -1,4 +1,4 @@
-PicResorter
+3061ef2b44e992a49dfef4ba28e10d7288996920aea2ca1376b7ce5abacb3c6c  ./PicResorter.jarPicResorter
 ===========
 A simple hack to help a friend resort and rename pictures by drag and drop
 
@@ -66,8 +66,8 @@ Install:
 2. Check the sha256sum `sha256sum PicResorter.jar`
 3. start with `java -jar ./PicResorter.jar`
  
-#### sha256sum of v1.0
-c034352a3a71e3688c0d452fec4ed4fedace90efd89b303752c42c0ce17fbabd  PicResorter.jar
+#### sha256sum
+3061ef2b44e992a49dfef4ba28e10d7288996920aea2ca1376b7ce5abacb3c6c  ./PicResorter.jar
 
 ----
 P.S. If current developments trouble you, you can [find peace](https://www.jw.org/en/library/series/more-topics/russia-invades-ukraine-bible-meaning-hope/)
