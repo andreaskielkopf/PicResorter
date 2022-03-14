@@ -70,6 +70,7 @@ Install:
 3061ef2b44e992a49dfef4ba28e10d7288996920aea2ca1376b7ce5abacb3c6c  ./PicResorter.jar
 
 ----
-P.S. If current developments trouble you, you can [find peace](https://www.jw.org/en/library/series/more-topics/russia-invades-ukraine-bible-meaning-hope/)
-P.S. Wenn dich die aktuellen Entwicklungen beunruhigen kannst du [Frieden finden](https://www.jw.org/de/bibliothek/artikelserien/weitere-themen/russland-marschiert-in-ukraine-ein-biblische-bedeutung-hoffnung/)
+P.S. If [current developments](https://www.jw.org/en/library/series/more-topics/ukraine-refugee-crisis-bible-meaning-hope/) trouble you, you can [find peace](https://www.jw.org/en/library/series/more-topics/russia-invades-ukraine-bible-meaning-hope/)
+
+P.S. Wenn dich die [aktuellen Entwicklungen](https://www.jw.org/de/bibliothek/artikelserien/weitere-themen/ukraine-fluechtlingskrise-bibel-bedeutung-hoffnung/) beunruhigen kannst du [Frieden finden](https://www.jw.org/de/bibliothek/artikelserien/weitere-themen/russland-marschiert-in-ukraine-ein-biblische-bedeutung-hoffnung/)
  
