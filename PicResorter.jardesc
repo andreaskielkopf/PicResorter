@@ -11,8 +11,8 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=PicResorter/src"/>
         <file path="/PicResorter/PicResorter.jardesc"/>
         <file path="/PicResorter/readme.md"/>
-        <javaElement handleIdentifier="=PicResorter/src"/>
     </selectedElements>
 </jardesc>

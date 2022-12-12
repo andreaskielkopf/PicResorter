@@ -21,7 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
-
+ 
 public class GlasButton extends JButton {
    private final static float FSIZE    =(50f/30f);
    private static final float F002     =0.02f;

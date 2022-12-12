@@ -1,35 +1,17 @@
 package de.uhingen.kielkopf.andreas.picresorter;
 
-import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.NoSuchFileException;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JViewport;
-import javax.swing.Scrollable;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.TransferHandler;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -253,11 +235,9 @@ public class Resorter extends JPanel
    public void mousePressed(MouseEvent e) {
       this.pressed=e.getPoint();
       Component o=this.getComponentAt(pressed);
-      if (o instanceof Picture)
-         pic=(Picture) o;
-      if (pic != null) {
-         System.out.println(pic.getNewName());
-         pic.setSelected(true);
+      if (o instanceof Picture pic1) {
+         System.out.println(pic1.getNewName());
+         pic1.setSelected(true);
          setCursor(HAND);
       }
    }
@@ -266,10 +246,9 @@ public class Resorter extends JPanel
       if (pic != null) {
          Point     released=e.getPoint();
          Component o       =this.getComponentAt(released);
-         if (o instanceof Picture) {
-            Picture ziel=(Picture) o;
-            int     von =this.picturelist.indexOf(pic);
-            int     nach=this.picturelist.indexOf(ziel);
+         if (o instanceof Picture ziel) {
+            int von =this.picturelist.indexOf(pic);
+            int nach=this.picturelist.indexOf(ziel);
             if ((von >= 0) && (nach >= 0) && (von != nach)) {
                if (von > nach) {
                   picturelist.remove(von);
